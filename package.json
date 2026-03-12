@@ -1,0 +1,48 @@
+{
+  "name": "openclaw-swarm-orchestrator",
+  "version": "0.1.0",
+  "description": "AI Agent cluster orchestration platform - manage, schedule, and coordinate multiple AI agents",
+  "main": "backend/app/main.py",
+  "scripts": {
+    "dev:backend": "cd backend && uvicorn app.main:app --reload",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build:frontend": "cd frontend && npm run build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:build": "docker-compose build",
+    "test:backend": "cd backend && pytest",
+    "test:frontend": "cd frontend && npm test",
+    "lint:backend": "cd backend && flake8 app/",
+    "lint:frontend": "cd frontend && npm run lint"
+  },
+  "keywords": [
+    "ai-agents",
+    "orchestration",
+    "swarm",
+    "multi-agent",
+    "fastapi",
+    "react",
+    "agent-framework",
+    "task-scheduling",
+    "openclaw",
+    "ai-orchestrator"
+  ],
+  "author": "OpenClaw Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZhenRobotics/openclaw-swarm-orchestrator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ZhenRobotics/openclaw-swarm-orchestrator/issues"
+  },
+  "homepage": "https://github.com/ZhenRobotics/openclaw-swarm-orchestrator#readme",
+  "engines": {
+    "node": ">=18.0.0",
+    "python": ">=3.11.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
